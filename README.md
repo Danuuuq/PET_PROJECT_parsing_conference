@@ -1,2 +1,2 @@
-# PET_PROJECT_parsing_conference
+# PARSING_conference
 Парсинг страницы с расписанием совещаний Газпром
