@@ -91,19 +91,3 @@ def send_email(new_conf, today_conf):
     smtp = smtplib.SMTP(server_email)
     smtp.sendmail(from_mail, to_mail.split(','), msg.as_string())
     smtp.quit()
-
-
-def scp_send_csv(file):
-    host = 'SECRET_DATA'
-    user = 'SECRET_DATA'
-    password = 'SECRET_DATA'
-    remote_dir = '/home/support/conference'
-    scp_command = [
-        'sshpass', '-p', password,
-        'scp', file, f'{user}@{host}:{remote_dir}'
-    ]
-    try:
-        result = subprocess.run(scp_command, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-        print('Файл успешно отправлен')
-    except subprocess.CalledProcessError as e:
-        print('Не отправился файл')
