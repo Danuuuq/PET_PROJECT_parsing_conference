@@ -5,11 +5,9 @@ from datetime import datetime
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 
-from_mail = 'conference@invest.gazprom.ru'
-# to_mail =  'dtyunkov@invest.gazprom.ru'
-# to_mail =  'dtyunkov@invest.gazprom.ru,drezinkov@invest.gazprom.ru'
-to_mail = 'epetukhova@invest.gazprom.ru,vvmarchenko@invest.gazprom.ru,dtyunkov@invest.gazprom.ru'
-server_email = 'mail.vk.giz.int'
+from_mail = 'SECRET_DATA'
+to_mail = 'SECRET_DATA'
+server_email = 'SECRET_DATA'
 
 
 def format_attach(current_time, new_conf, today_conf):
@@ -96,9 +94,9 @@ def send_email(new_conf, today_conf):
 
 
 def scp_send_csv(file):
-    host = '10.7.84.238'
-    user = 'support'
-    password = 'Rhfcysq,tutvjn+50%'
+    host = 'SECRET_DATA'
+    user = 'SECRET_DATA'
+    password = 'SECRET_DATA'
     remote_dir = '/home/support/conference'
     scp_command = [
         'sshpass', '-p', password,
